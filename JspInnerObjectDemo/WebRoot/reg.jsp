@@ -30,17 +30,27 @@
 		<table>
 			<tr>
 				<td>用户名:</td>
-				<td><input type="text" name="username"></td>
+				<td>
+					<input type="text" name="username">
+				</td>
 			</tr>
 			<tr>
 				<td>爱好:</td>
-				<td><input type="checkbox" name="favorite" value="read">读书
-					<input type="checkbox" name="favorite" value="music">音乐 <input
-					type="checkbox" name="favorite" value="movie">电影<input
-					type="checkbox" name="favorite" value="internet">上网</td>
+				<td>
+					<input type="checkbox" name="favorite" value="read" />
+					读书
+					<input type="checkbox" name="favorite" value="music" />
+					音乐
+					<input type="checkbox" name="favorite" value="movie" />
+					电影
+					<input type="checkbox" name="favorite" value="internet" />
+					上网
+				</td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="提交"></td>
+				<td colspan="2">
+					<input type="submit" value="提交">
+				</td>
 			</tr>
 		</table>
 	</form>
