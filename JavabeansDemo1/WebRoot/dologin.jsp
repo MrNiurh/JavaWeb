@@ -25,7 +25,7 @@
 </head>
 
 <body>
-	<jsp:useBean id="myUsers" class="com.po.Users" scope="page" />
+	<jsp:useBean id="myUsers" class="com.po.Users" scope="request" />
 	<h1>setProperty动作元素</h1>
 	<hr>
 
@@ -50,9 +50,23 @@
 	<jsp:setProperty property="username" name="myUsers" />
 	<jsp:setProperty property="password" name="myUsers" param="mypass" />
 
+	<!-- 使用传统的表达式方式来获取用户名和密码 -->
+	<!-- 
 	用户名:<%=myUsers.getUsername()%>
 	<br> 密码:<%=myUsers.getPassword()%>
 	<br>
+	 -->
+
+	<!-- 使用getProperty方式来获取用户名和密码 -->
+	用户名:<jsp:getProperty property="username" name="myUsers" />
+	<br> 密码:<jsp:getProperty property="password" name="myUsers" />
+	<br>
+	<br>
+	<a href="testScope.jsp">测试Javabean的四个作用域范围</a>
+
+	<%
+		request.getRequestDispatcher("testScope.jsp").forward(request, response);
+	%>
 
 </body>
 </html>
